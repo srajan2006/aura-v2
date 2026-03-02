@@ -6,7 +6,7 @@ import { useAuthStore } from "@/store/authStore";
 import axios from "axios";
 import "./recommendations.css";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://aura-v2-vhvv.onrender.com";
 
 interface OutfitItem {
   id: string; garment_type: string; color: string;

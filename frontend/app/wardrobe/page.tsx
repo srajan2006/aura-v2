@@ -6,7 +6,7 @@ import { useAuthStore } from "@/store/authStore";
 import axios from "axios";
 import "./wardrobe.css";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://aura-v2-vhvv.onrender.com";
 const GARMENT_TYPES = ["tshirt", "shirt", "jacket", "jeans"];
 const COLORS = ["black","darkgrey","grey","lightgrey","white","red","orange","yellow","green","lightgreen","blue","lightblue","skyblue","navy","purple","pink","brown","tan","beige","khaki","cream"];
 const PATTERNS = ["solid", "striped", "checked", "printed"];

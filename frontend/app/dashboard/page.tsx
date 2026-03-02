@@ -6,7 +6,7 @@ import { useAuthStore } from "@/store/authStore";
 import axios from "axios";
 import "./dashboard.css";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://aura-v2-vhvv.onrender.com";
 
 export default function DashboardPage() {
   const router = useRouter();
