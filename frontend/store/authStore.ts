@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://aura-v2-vhvv.onrender.com';
 
 interface User {
   email: string;
