@@ -12,7 +12,7 @@ import os
 
 import auth
 from auth import (
-    init_db, get_user_by_email, email_exists, username_exists,
+    init_db, get_db, get_user_by_email, email_exists, username_exists,
     create_user, get_password_hash, verify_password,
     create_access_token, get_current_user,
     add_wardrobe_item, get_wardrobe_items,
