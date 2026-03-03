@@ -243,5 +243,16 @@ def get_recommendations(
         "outfits": outfits
     }
 
+@app.get("/admin/stats")
+def admin_stats():
+    conn = get_db()
+    users = conn.execute("SELECT email, username, full_name, created_at FROM users").fetchall()
+    items = conn.execute("SELECT COUNT(*) as total FROM wardrobe_items").fetchone()
+    conn.close()
+    return {
+        "total_users": len(users),
+        "total_items": items["total"],
+        "users": [dict(u) for u in users]
+    }
 # ── Static files — ALWAYS LAST ─────────────────────────────────────────────────
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
