@@ -66,10 +66,10 @@ def init_db():
 
 # ── User helpers ───────────────────────────────────────────────────────────────
 def get_password_hash(password: str) -> str:
-    return pwd_context.hash(password)
+    return pwd_context.hash(password[:72])
 
 def verify_password(plain: str, hashed: str) -> bool:
-    return pwd_context.verify(plain, hashed)
+    return pwd_context.verify(plain[:72], hashed)
 
 def create_user(email: str, username: str, full_name: str, hashed_password: str):
     conn = get_db()
